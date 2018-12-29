@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{136:function(e,n,r){"use strict";r.r(n);var t=r(0),u=r.n(t);n.default=function(){return u.a.createElement("h1",null,"My Header Cloud Prices.")}}}]);
+//# sourceMappingURL=component---src-pages-components-header-js-28a16d80887e6c8fc226.js.map
