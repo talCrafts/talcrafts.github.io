@@ -5,7 +5,7 @@
 <h1>Compare Cloud</h1>
 <h2> Prices as of 11 Jan 1997</h2>
 <p>Hosting static website on below cloud </p>
-<table>
+<table id="sh">
    <tr>
     <th>Cloud </th>
     <th>AWS</th>
@@ -70,11 +70,24 @@ Comming Soon
 var slider = document.getElementById("myRange");
 var output = document.getElementById("demo");
 output.innerHTML = slider.value;
+var table=document.getElementById("sh")
+
 
 slider.oninput = function() {
   output.innerHTML = this.value;
-}
+  var len=table.rows.length;
+  for(i=0;i<len;i++){
+  	columns=table.rows[i].cells;
+    field=columns[0];
+    if(field.innerHTML == "Price"){
+       for(j=1;j< columns.length;j++){
+       	columns[j].innerHTML=this.value; 
+       }
+    }
+  }
+} 
 </script>
 
 </body>
 </html>
+
