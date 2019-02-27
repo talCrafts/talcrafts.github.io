@@ -8,13 +8,13 @@
 <table id="sh">
    <tr>
     <th>Cloud </th>
-    <th>AWS</th>
-    <th>Azure</th>
-    <th>Google Cloud</th>
+    <th id="aws">AWS</th>
+    <th id="azure">Azure</th>
+    <th id="gcp">Google Cloud</th>
   </tr>
   <tr>
     <td>Size</td>
-    <td>t3.Nano</td>
+    <td>t3.nano</td>
     <td>A0</td>
     <td>f1-micro</td>
   </tr>
@@ -25,29 +25,29 @@
     <td>0 $/hr</td>
   </tr>
   <tr>
-  	<td>CPU</td>
+    <td>CPU</td>
     <td>X</td>
     <td>X</td>
     <td>X</td>    
   </tr>
   <tr>
-  	<td>RAM</td>
-  	<td>X</td>
-  	<td>X</td>
-  	<td>X</td>
+    <td>RAM</td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
   </tr>
-  
+
   <tr>
-  	<td>Disk</td>
-  	<td>X</td>
-  	<td>X</td>
-  	<td>X</td>
+    <td>Disk</td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
   </tr>
   <tr>
-  	<td>Network</td>
-  	<td>X</td>
-  	<td>X</td>
-  	<td>X</td>
+    <td>Network</td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
   </tr>
 </table>
 <p>Number of visits: <span id="demo"></span> per hour </p>
@@ -67,21 +67,76 @@ Date: Wed, 17 Apr 2013 12:00:00 GMT
 Comming Soon
 </pre>
 <script>
+
+var data= {
+  "aws": {
+    "static-site": {
+      "t3.nano":
+        {
+          "min-user": 1,
+          "max-user": 100,
+          "sku": "SFFFF-ASFF-ASDFSDF",
+          "price": 4,
+          "currency":"USD",
+          "duration-hours": 1
+        }
+      }
+  },
+  "azure": {
+    "static-site": {
+      "a0": 
+        {
+          "min-user": 1,
+          "max-user": 100,
+          "sku": "SFFFF-WEW-ASDFSDF",
+          "price": 3,
+          "currency":"USD",
+          "duration-hours": 1
+       }
+    }
+  },
+  "gcp": {
+    "static-site": {
+      "f1-micro": 
+        {
+          "min-user": 1,
+          "max-user": 100,
+          "sku": "SFXFF-WEW-ASDFSDF",
+          "price": 7,
+          "currency":"USD",
+          "duration-hours": 1
+       }
+    }
+  }
+}
+
+function getValue(dataAddress){
+  var res = dataAddress.split(':').reduce(function(o, k) {
+    return o && o[k];
+}, data);
+   alert(dataAddress);
+   return res.price;
+}
+
+
 var slider = document.getElementById("myRange");
 var output = document.getElementById("demo");
 output.innerHTML = slider.value;
-var table=document.getElementById("sh")
-
+var table=document.getElementById("sh");
+var testsuite="static-site";
 
 slider.oninput = function() {
   output.innerHTML = this.value;
   var len=table.rows.length;
+  cloudRow=table.rows[0].cells;
+  sizeRow=table.rows[1].cells;
   for(i=0;i<len;i++){
-  	columns=table.rows[i].cells;
+    columns=table.rows[i].cells;
     field=columns[0];
     if(field.innerHTML == "Price"){
        for(j=1;j< columns.length;j++){
-       	columns[j].innerHTML=this.value; 
+        resolution=cloudRow[j].id+":"+testsuite+":"+sizeRow[j].innerHTML
+        columns[j].innerHTML=getValue(resolution.toLowerCase()); 
        }
     }
   }
