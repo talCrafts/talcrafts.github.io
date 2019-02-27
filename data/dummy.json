@@ -1,7 +1,7 @@
 {
     "aws": {
       "static-site": {
-        "t3.micro":
+        "t3.nano":
           {
             "min-user": 1,
             "max-user": 100,
