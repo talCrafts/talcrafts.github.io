@@ -1,28 +1,41 @@
 {
-    "aws": {
-      "static-site": {
-        "t3.nano":
-          {
-            "min-user": 1,
-            "max-user": 100,
-            "sku": "SFFFF-ASFF-ASDFSDF",
-            "price": 2,
-            "currency":"USD",
-            "duration-hours": 1
-          }
+  "aws": {
+    "static-site": {
+      "t3.nano":
+        {
+          "min-user": 1,
+          "max-user": 100,
+          "sku": "SFFFF-ASFF-ASDFSDF",
+          "price": 4,
+          "currency":"USD",
+          "duration-hours": 1
         }
-    },
-    "azure": {
-      "static-site": {
-        "a0": 
-          {
-            "min-user": 1,
-            "max-user": 100,
-            "sku": "SFFFF-WEW-ASDFSDF",
-            "price": 1,
-            "currency":"USD",
-            "duration-hours": 1
-          }
-        }
+      }
+  },
+  "azure": {
+    "static-site": {
+      "a0": 
+        {
+          "min-user": 1,
+          "max-user": 100,
+          "sku": "SFFFF-WEW-ASDFSDF",
+          "price": 3,
+          "currency":"USD",
+          "duration-hours": 1
+       }
+    }
+  },
+  "gcp": {
+    "static-site": {
+      "f1-micro": 
+        {
+          "min-user": 1,
+          "max-user": 100,
+          "sku": "SFXFF-WEW-ASDFSDF",
+          "price": 7,
+          "currency":"USD",
+          "duration-hours": 1
+       }
     }
   }
+}
