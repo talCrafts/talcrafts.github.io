@@ -160,7 +160,7 @@ slider.oninput = function() {
 } 
 
 loadJSON('data/dummy.json',
-       function(data) { console.log(data); },
+       function(urlData) { data=urlData; },
        function(xhr) { console.error(xhr); }
 );
 </script>
