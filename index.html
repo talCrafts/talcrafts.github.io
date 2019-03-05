@@ -1,64 +1,170 @@
 <!DOCTYPE html>
 <html>
+<title> Compar Cloud</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-light-blue.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    th,
+    td {
+      padding: 15px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    .slider {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 15px;
+      border-radius: 5px;
+      background: #d3d3d3;
+      outline: none;
+      opacity: 0.7;
+      -webkit-transition: .2s;
+      transition: opacity .2s;
+    }
+
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: #4CAF50;
+      cursor: pointer;
+    }
+
+    .slider::-moz-range-thumb {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: #4CAF50;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
 <body>
 
-<h1>Compare Cloud</h1>
-<h2> Prices as of 11 Jan 1997</h2>
-<p>Hosting static website on below cloud </p>
-<table id="sh">
-   <tr>
-    <th>Cloud </th>
-    <th id="aws">AWS</th>
-    <th id="azure">Azure</th>
-    <th id="gcp">Google Cloud</th>
-  </tr>
-  <tr>
-    <td>Size</td>
-    <td>t3.nano</td>
-    <td>A0</td>
-    <td>f1-micro</td>
-  </tr>
-  <tr>
-    <td>Price</td>
-    <td>0 $/hr</td>
-    <td>0 $/hr</td>
-    <td>0 $/hr</td>
-  </tr>
-  <tr>
-    <td>CPU</td>
-    <td>X</td>
-    <td>X</td>
-    <td>X</td>    
-  </tr>
-  <tr>
-    <td>RAM</td>
-    <td>X</td>
-    <td>X</td>
-    <td>X</td>
-  </tr>
+  <!-- Header -->
+  <header class="w3-container w3-theme w3-padding" id="myHeader">
+    <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i>
+    <div class="w3-center">
+      <h4>Prices as of 11 Jan 1997</h4>
+      <h1 class="w3-xxxlarge w3-animate-bottom">Compare Cloud</h1>
+    </div>
+  </header>
 
-  <tr>
-    <td>Disk</td>
-    <td>X</td>
-    <td>X</td>
-    <td>X</td>
-  </tr>
-  <tr>
-    <td>Network</td>
-    <td>X</td>
-    <td>X</td>
-    <td>X</td>
-  </tr>
-</table>
-<p>Number of visits: <span id="demo"></span> per hour </p>
-<input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+  <!-- Page content -->
+  <div class="w3-content" style="max-width:1532px;">
 
-<h2> Test being done</h2>
+    <div class="w3-container w3-margin-top" id="rooms">
+      <h3>Hosting static website on below cloud</h3>
+      <p>Make yourself at home is our slogan. We offer the best beds in the industry. Sleep well and rest well.</p>
+    </div>
 
-In this test, we took simple Nginx server and hosted a static page containing text "Comming Soon" which is rendered in plain text. With smaller size network latency will not affect performance.
+    <div class="w3-row-padding">
+      <div class="w3-col m3">
+        <label>
+          <i class="fa fa-calendar-o"></i> Check In</label>
+        <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY">
+      </div>
+      <div class="w3-col m3">
+        <label>
+          <i class="fa fa-calendar-o"></i> Check Out</label>
+        <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY">
+      </div>
+      <div class="w3-col m2">
+        <label>
+          <i class="fa fa-male"></i> Adults</label>
+        <input class="w3-input w3-border" type="number" placeholder="1">
+      </div>
+      <div class="w3-col m2">
+        <label>
+          <i class="fa fa-child"></i> Kids</label>
+        <input class="w3-input w3-border" type="number" placeholder="0">
+      </div>
+      <div class="w3-col m2">
+        <label>
+          <i class="fa fa-search"></i> Search</label>
+        <button class="w3-button w3-block w3-black">Search</button>
+      </div>
+      <div>
+        <p>Number of visits:
+          <span id="demo"></span>per hour</p>
+      </div>
+      <div class="slidecontainer">
 
-</br>Example response:
-<pre>HTTP/1.1 200 OK
+        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+      </div>
+    </div>
+
+    <div style="overflow-x:auto;">
+
+
+      <table id="sh">
+        <tr>
+          <th>Cloud </th>
+          <th id="aws">AWS</th>
+          <th id="azure">Azure</th>
+          <th id="gcp">Google Cloud</th>
+        </tr>
+        <tr>
+          <td>Size</td>
+          <td>t3.nano</td>
+          <td>A0</td>
+          <td>f1-micro</td>
+        </tr>
+        <tr>
+          <td>Price</td>
+          <td>0 $/hr</td>
+          <td>0 $/hr</td>
+          <td>0 $/hr</td>
+        </tr>
+        <tr>
+          <td>CPU</td>
+          <td>X</td>
+          <td>X</td>
+          <td>X</td>
+        </tr>
+        <tr>
+          <td>RAM</td>
+          <td>X</td>
+          <td>X</td>
+          <td>X</td>
+        </tr>
+
+        <tr>
+          <td>Disk</td>
+          <td>X</td>
+          <td>X</td>
+          <td>X</td>
+        </tr>
+        <tr>
+          <td>Network</td>
+          <td>X</td>
+          <td>X</td>
+          <td>X</td>
+        </tr>
+      </table>
+    </div>
+
+    <h2> Test being done</h2>
+
+    In this test, we took simple Nginx server and hosted a static page containing text "Comming Soon" which is rendered in plain
+    text. With smaller size network latency will not affect performance.
+
+    </br>Example response:
+    <pre>HTTP/1.1 200 OK
 Content-Length: 15
 Content-Type: text/plain; charset=UTF-8
 Server: Example
@@ -66,65 +172,64 @@ Date: Wed, 17 Apr 2013 12:00:00 GMT
 
 Comming Soon
 </pre>
-<script>
+    <script>
 
-var data= {};
+      var data = {};
 
-function loadJSON(path, success, error){
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function()
-  {
-      if (xhr.readyState === XMLHttpRequest.DONE) {
-          if (xhr.status === 200) {
+      function loadJSON(path, success, error) {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
               if (success)
-                  success(JSON.parse(xhr.responseText));
-          } else {
+                success(JSON.parse(xhr.responseText));
+            } else {
               if (error)
-                  error(xhr);
+                error(xhr);
+            }
           }
+        };
+        xhr.open("GET", path, true);
+        xhr.send();
       }
-  };
-  xhr.open("GET", path, true);
-  xhr.send();
-}
 
-function getValue(dataAddress){
-  var res = dataAddress.split(':').reduce(function(o, k) {
-    return o && o[k];
-}, data);
-   return res.price;
-}
+      function getValue(dataAddress) {
+        var res = dataAddress.split(':').reduce(function (o, k) {
+          return o && o[k];
+        }, data);
+        return res.price;
+      }
 
 
-var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
-output.innerHTML = slider.value;
-var table=document.getElementById("sh");
-var testsuite="static-site";
+      var slider = document.getElementById("myRange");
+      var output = document.getElementById("demo");
+      output.innerHTML = slider.value;
+      var table = document.getElementById("sh");
+      var testsuite = "static-site";
 
-slider.oninput = function() {
-  output.innerHTML = this.value;
-  var len=table.rows.length;
-  cloudRow=table.rows[0].cells;
-  sizeRow=table.rows[1].cells;
-  for(i=0;i<len;i++){
-    columns=table.rows[i].cells;
-    field=columns[0];
-    if(field.innerHTML == "Price"){
-       for(j=1;j< columns.length;j++){
-        resolution=cloudRow[j].id+":"+testsuite+":"+sizeRow[j].innerHTML
-        columns[j].innerHTML=getValue(resolution.toLowerCase()); 
-       }
-    }
-  }
-} 
+      slider.oninput = function () {
+        output.innerHTML = this.value;
+        var len = table.rows.length;
+        cloudRow = table.rows[0].cells;
+        sizeRow = table.rows[1].cells;
+        for (i = 0; i < len; i++) {
+          columns = table.rows[i].cells;
+          field = columns[0];
+          if (field.innerHTML == "Price") {
+            for (j = 1; j < columns.length; j++) {
+              resolution = cloudRow[j].id + ":" + testsuite + ":" + sizeRow[j].innerHTML
+              columns[j].innerHTML = getValue(resolution.toLowerCase());
+            }
+          }
+        }
+      }
 
-loadJSON('data/dummy.json',
-       function(urlData) { data=urlData; },
-       function(xhr) { console.error(xhr); }
-);
-</script>
+      loadJSON('data/dummy.json',
+        function (urlData) { data = urlData; },
+        function (xhr) { console.error(xhr); }
+      );
+    </script>
 
 </body>
-</html>
 
+</html>
