@@ -163,26 +163,32 @@
     </br>
     </br>
 
-    <div class="w3-row-padding" align="center">
-      <div class="w3-col m3">
-        <input class="w3-radio" type="radio" name="gender" value="days" checked>
-        <label>Days</label>
+    <div style="overflow-x:auto;" align="center">
+      <div class="w3-row-padding">
+        <div class="w3-col m1">
+          Duration:
+        </div>
+        <div class="w3-col m1">
+          <input  vertical-align="middle" class="w3-input w3-border" type="number" placeholder="1">
+        </div>
+        <div class="w3-col m3">
+          <input class="w3-radio" type="radio" name="gender" value="days" checked>
+          <label>Days</label>
 
-        <input class="w3-radio" type="radio" name="gender" value="months">
-        <label>Months</label>
+          <input class="w3-radio" type="radio" name="gender" value="months">
+          <label>Months</label>
 
-        <input class="w3-radio" type="radio" name="gender" value="years">
-        <label>Years</label>
-      </div>
-      <div class="w3-col m1">
-        <input class="w3-input w3-border" type="number" placeholder="1">
-      </div>
-      <div class="w3-col m3" align-horizontal="center">
-        <p>Number of visits: <label id="demo" /> per hour
-        </p>
-      </div>
-      <div class="w3-col m4">
-        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+          <input class="w3-radio" type="radio" name="gender" value="years">
+          <label>Years</label>
+        </div>
+
+        <div class="w3-col m3" vertical-align="middle">
+          Number of visits:
+          <label id="demo" /> per hour
+        </div>
+        <div class="w3-col m4">
+          <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        </div>
       </div>
     </div>
 
