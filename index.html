@@ -8,18 +8,23 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
 
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-/* Style the table */
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    /* Style the table */
 
-table {
-border-collapse: collapse;
-border-spacing: 0;
-width: 80%;
-border: 1px solid #ddd;
-}
+    head,
+    body {
+      font-size: 20px
+    }
 
-/* Style table headers and table data */
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+      width: 80%;
+      border: 1px solid #ddd;
+    }
+
+    /* Style table headers and table data */
 
     th {
       background-color: rgb(0, 7, 0);
@@ -80,9 +85,9 @@ border: 1px solid #ddd;
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131361610-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-   function gtag(){dataLayer.push(arguments);}
-   gtag('js', new Date());
-   gtag('config', 'UA-131361610-1');
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-131361610-1');
   </script>
 
 </head>
@@ -103,44 +108,9 @@ border: 1px solid #ddd;
 
     <div class="w3-container w3-margin-top" id="rooms">
       <h3>Hosting static website on below cloud</h3>
-      <p>Make yourself at home is our slogan. We offer the best beds in the industry. Sleep well and rest well.</p>
     </div>
 
-    <div class="w3-row-padding">
-      <div class="w3-col m3">
-        <label>
-          <i class="fa fa-calendar-o"></i> Check In</label>
-        <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY">
-      </div>
-      <div class="w3-col m3">
-        <label>
-          <i class="fa fa-calendar-o"></i> Check Out</label>
-        <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY">
-      </div>
-      <div class="w3-col m2">
-        <label>
-          <i class="fa fa-male"></i> Adults</label>
-        <input class="w3-input w3-border" type="number" placeholder="1">
-      </div>
-      <div class="w3-col m2">
-        <label>
-          <i class="fa fa-child"></i> Kids</label>
-        <input class="w3-input w3-border" type="number" placeholder="0">
-      </div>
-      <div class="w3-col m2">
-        <label>
-          <i class="fa fa-search"></i> Search</label>
-        <button class="w3-button w3-block w3-black">Search</button>
-      </div>
-      <div>
-        <p>Number of visits:
-          <span id="demo"></span>per hour</p>
-      </div>
-      <div class="slidecontainer">
 
-        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-      </div>
-    </div>
 
     <div style="overflow-x:auto;" align="center">
       <table id="sh" class="w3-row-padding">
@@ -190,8 +160,33 @@ border: 1px solid #ddd;
       </table>
     </div>
 
-    <h2> Test being done</h2>
+    </br>
+    </br>
 
+    <div class="w3-row-padding" align="center">
+      <div class="w3-col m3">
+        <input class="w3-radio" type="radio" name="gender" value="days" checked>
+        <label>Days</label>
+
+        <input class="w3-radio" type="radio" name="gender" value="months">
+        <label>Months</label>
+
+        <input class="w3-radio" type="radio" name="gender" value="years">
+        <label>Years</label>
+      </div>
+      <div class="w3-col m1">
+        <input class="w3-input w3-border" type="number" placeholder="1">
+      </div>
+      <div class="w3-col m3" align-horizontal="center">
+        <p>Number of visits: <label id="demo" /> per hour
+        </p>
+      </div>
+      <div class="w3-col m4">
+        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+      </div>
+    </div>
+
+    <h2> Test being done</h2>
     In this test, we took simple Nginx server and hosted a static page containing text "Coming Soon" which is rendered in plain
     text. With smaller size network latency will not affect performance.
 
@@ -263,17 +258,17 @@ Coming Soon
     </script>
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
-	var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-	(function(){
-		var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-		s1.async=true;
-		s1.src='https://embed.tawk.to/5c5fe70f7cf662208c94dcb4/default';
-		s1.charset='UTF-8';
-		s1.setAttribute('crossorigin','*');
-		s0.parentNode.insertBefore(s1,s0);
-	})();
+      var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/5c5fe70f7cf662208c94dcb4/default';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+      })();
     </script>
-<!--End of Tawk.to Script-->
+    <!--End of Tawk.to Script-->
 
 </body>
 
